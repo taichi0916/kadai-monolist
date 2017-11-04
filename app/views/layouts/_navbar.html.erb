@@ -14,12 +14,10 @@
       <ul class="nav navbar-nav navbar-right">
         <% if logged_in? %>
             <li>
-              <a href="#">
-                <%= link_to new_item_path do %>
+              <%= link_to new_item_path do %>
                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                 アイテムを追加
-                <% end %>
-              </a>
+              <% end %>
             </li>
 
             <li class="dropdown">
@@ -31,11 +29,9 @@
                 <span class="caret"></span>
               </a>
               <ul class="dropdown-menu">
-                <li>
-                  <%= link_to 'マイページ', user_path(current_user) %>
-                </li>
+                <li><%= link_to 'マイページ', user_path(current_user) %></li>
                 <li role="separator" class="divider"></li>
-                   <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
+                <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
                 </li>
               </ul>
             </li>
